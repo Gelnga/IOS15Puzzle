@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91336A472784BC1800863663 /* GameBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91336A462784BC1800863663 /* GameBrain.swift */; };
 		91F10F462760E33D009468C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F10F452760E33D009468C4 /* AppDelegate.swift */; };
 		91F10F482760E33D009468C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F10F472760E33D009468C4 /* SceneDelegate.swift */; };
 		91F10F4A2760E33D009468C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F10F492760E33D009468C4 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		91336A462784BC1800863663 /* GameBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBrain.swift; sourceTree = "<group>"; };
 		91F10F422760E33D009468C4 /* 15-puzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "15-puzzle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F10F452760E33D009468C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91F10F472760E33D009468C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			children = (
 				91F10F452760E33D009468C4 /* AppDelegate.swift */,
 				91F10F472760E33D009468C4 /* SceneDelegate.swift */,
+				91336A462784BC1800863663 /* GameBrain.swift */,
 				91F10F492760E33D009468C4 /* ViewController.swift */,
 				91F10F4B2760E33D009468C4 /* Main.storyboard */,
 				91F10F512760E33E009468C4 /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91F10F4A2760E33D009468C4 /* ViewController.swift in Sources */,
+				91336A472784BC1800863663 /* GameBrain.swift in Sources */,
 				91F10F462760E33D009468C4 /* AppDelegate.swift in Sources */,
 				91F10F482760E33D009468C4 /* SceneDelegate.swift in Sources */,
 				91F10F502760E33D009468C4 /* _5_puzzle.xcdatamodeld in Sources */,
