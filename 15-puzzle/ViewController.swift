@@ -40,6 +40,21 @@ class ViewController: UIViewController {
         updateUI()
     }
     
+    @IBAction func buttonSaveGameTouchUpInside(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Enter save name", message: "Please enter save name for a current game", preferredStyle: UIAlertController.Style.alert)
+        
+        alert.addTextField { (textField) in
+            textField.placeholder = "Save name"
+        }
+        
+        alert.addAction(UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { [weak alert] (_) in
+            let textField = alert!.textFields![0]
+            print("Text field: \(textField.text ?? "nothing")")
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     private func updateUI() {
         let gameBoard = brain.getGameBoard()
         

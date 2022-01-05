@@ -26,6 +26,7 @@ class GameBrain {
         currentBlankTileLocation = "33"
         moves = 0
         previousMoves = []
+        shuffle()
     }
     
     func validateMove(_ buttonTitle: String) -> Bool {
@@ -45,7 +46,6 @@ class GameBrain {
             (rowBlankTile == row && colBlankTile - col == -1)) {
             
             previousMoves.append(currentBlankTileLocation)
-            currentBlankTileLocation = buttonTitle
             swapButton(rowPressed: row, colPressed: col, blankTileRow: rowBlankTile, blankTileCol: colBlankTile)
             moves += 1
             
@@ -98,8 +98,51 @@ class GameBrain {
     
     private func swapButton(rowPressed: Int, colPressed: Int, blankTileRow: Int, blankTileCol: Int) {
         
+        currentBlankTileLocation = String(rowPressed) + String(colPressed)
         let pressed = gameBoard[rowPressed][colPressed]
         gameBoard[rowPressed][colPressed] = "X"
         gameBoard[blankTileRow][blankTileCol] = pressed
+    }
+    
+    private func shuffle() {
+        var i = 100
+        while i > 0 {
+            randomMove()
+            i -= 1
+        }
+    }
+    
+    private func randomMove() {
+        let rowOrCol = Int.random(in: 0..<2)
+        var change = 0
+        
+        let rowBlankTile = getButtonRow(currentBlankTileLocation)
+        let colBlankTile = getButtonCol(currentBlankTileLocation)
+        
+        if (rowOrCol == 0) {
+            change = rowBlankTile
+        } else {
+            change = colBlankTile
+        }
+        
+        while true {
+            if (Int.random(in: 0..<2) == 0) {
+                change += 1
+            } else {
+                change -= 1
+            }
+            
+            let borderRange = 0...3
+            
+            if (borderRange.contains(change)) {
+                break
+            }
+        }
+        
+        if (rowOrCol == 0) {
+            swapButton(rowPressed: change, colPressed: colBlankTile, blankTileRow: rowBlankTile, blankTileCol: colBlankTile)
+        } else {
+            swapButton(rowPressed: rowBlankTile, colPressed: change, blankTileRow: rowBlankTile, blankTileCol: colBlankTile)
+        }
     }
 }

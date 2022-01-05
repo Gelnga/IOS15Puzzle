@@ -66,10 +66,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enM-lY-LzJ">
-                                                        <rect key="frame" x="0.5" y="46" width="64" height="34"/>
+                                                        <rect key="frame" x="2.5" y="46" width="60" height="34"/>
                                                         <color key="backgroundColor" name="AccentColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="64" id="YeY-JI-Jgn"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="93x-Bs-zLe"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                                         <size key="titleShadowOffset" width="1" height="1"/>
@@ -93,10 +93,10 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rOm-GY-a7r">
-                                                <rect key="frame" x="142.5" y="355" width="109" height="34"/>
+                                                <rect key="frame" x="137" y="355" width="120" height="34"/>
                                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="109" id="SuA-4V-kMu"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="pbi-ST-eia"/>
                                                 </constraints>
                                                 <size key="titleShadowOffset" width="1" height="1"/>
                                                 <state key="normal" title="New Game">
@@ -115,11 +115,30 @@
                                                     <action selector="buttonNewGameTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JRx-JE-Nku"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2TD-Sr-nVz">
+                                                <rect key="frame" x="137" y="306" width="120" height="34"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="Save game">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="buttonSaveGameTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XK0-he-46X"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="3Wf-0h-W1i" firstAttribute="centerY" secondItem="2yH-9V-amP" secondAttribute="centerY" id="6Zd-GM-Qi0"/>
-                                            <constraint firstItem="rOm-GY-a7r" firstAttribute="centerX" secondItem="2yH-9V-amP" secondAttribute="centerX" id="Fpf-Ke-3Lb"/>
+                                            <constraint firstItem="rOm-GY-a7r" firstAttribute="width" secondItem="2TD-Sr-nVz" secondAttribute="width" id="9hy-J7-nBi"/>
+                                            <constraint firstItem="rOm-GY-a7r" firstAttribute="top" secondItem="2TD-Sr-nVz" secondAttribute="bottom" constant="15" id="KsT-5F-EnU"/>
+                                            <constraint firstItem="2TD-Sr-nVz" firstAttribute="centerX" secondItem="2yH-9V-amP" secondAttribute="centerX" id="YeC-hq-NhZ"/>
+                                            <constraint firstItem="rOm-GY-a7r" firstAttribute="centerX" secondItem="2yH-9V-amP" secondAttribute="centerX" id="aJr-yv-jcI"/>
                                             <constraint firstItem="3Wf-0h-W1i" firstAttribute="centerX" secondItem="2yH-9V-amP" secondAttribute="centerX" id="bHo-Nh-41P"/>
                                             <constraint firstAttribute="bottom" secondItem="rOm-GY-a7r" secondAttribute="bottom" constant="5" id="eh6-6v-tmr"/>
                                         </constraints>
