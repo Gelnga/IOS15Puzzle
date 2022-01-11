@@ -11,7 +11,9 @@ class GameBrain {
     private var gameBoard: [[String]] = []
     private var currentBlankTileLocation = ""
     private var moves = 0
+    private var time = 0
     private var previousMoves: [String] = []
+    private var won = false;
     
     func getGameBoard() -> [[String]] {
         return gameBoard
@@ -25,11 +27,25 @@ class GameBrain {
         gameBoard = getCompleteGameBoard()
         currentBlankTileLocation = "33"
         moves = 0
+        time = 0
         previousMoves = []
+        won = false
         shuffle()
     }
     
+    func getMovesMade() -> Int {
+        return moves
+    }
+    
+    func getTimeSpent() -> Int {
+        return time
+    }
+ 
     func validateMove(_ buttonTitle: String) -> Bool {
+        if (won) {
+            return false
+        }
+        
         let row = getButtonRow(buttonTitle)
         let col = getButtonCol(buttonTitle)
         
@@ -67,6 +83,10 @@ class GameBrain {
     }
     
     public func undoMove() {
+        if (won) {
+            return
+        }
+        
         if (previousMoves.count <= 0) {
             return
         }
@@ -84,6 +104,48 @@ class GameBrain {
         moves -= 1
         currentBlankTileLocation = previousMove
         previousMoves.removeLast()
+    }
+    
+    public func incrementTime() {
+        time += 1
+    }
+    
+    public func getTime() -> Int {
+        return time
+    }
+    
+    public func getGameBrainJSON() -> String {
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+        let gameBrainDTO = GameBrainDTO(
+            gameBoard: self.gameBoard,
+            currentBlankTileLocation: self.currentBlankTileLocation,
+            moves: self.moves,
+            time: self.time,
+            previousMoves: self.previousMoves)
+        
+        let data = try! encoder.encode(gameBrainDTO)
+        return String(data: data, encoding: .utf8)!
+    }
+    
+    public func restoreGameBrainFromJSON(JSON: String) {
+        let decoder = JSONDecoder()
+        let data = JSON.data(using: .utf8)!
+        let decodedBrainDTO = try! decoder.decode(GameBrainDTO.self, from: data)
+        
+        gameBoard = decodedBrainDTO.gameBoard
+        currentBlankTileLocation = decodedBrainDTO.currentBlankTileLocation
+        moves = decodedBrainDTO.moves
+        time = decodedBrainDTO.time
+        previousMoves = decodedBrainDTO.previousMoves
+    }
+    
+    public func isWin() -> Bool {
+        if won || gameBoard == getCompleteGameBoard() {
+            won = true
+            return true
+        }
+        return false
     }
     
     private func getButtonRow(_ buttonTitle: String) -> Int {

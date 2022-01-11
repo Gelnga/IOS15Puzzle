@@ -8,9 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		91336A472784BC1800863663 /* GameBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91336A462784BC1800863663 /* GameBrain.swift */; };
+		91D12F13278D79D8008E278F /* LoadGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D12F12278D79D8008E278F /* LoadGameController.swift */; };
+		91D12F15278D79F1008E278F /* LeaderBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D12F14278D79F1008E278F /* LeaderBoardController.swift */; };
+		91D12F17278D87A4008E278F /* GameBrainDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D12F16278D87A4008E278F /* GameBrainDTO.swift */; };
+		91D12F1C278D977A008E278F /* SavedGame+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D12F18278D977A008E278F /* SavedGame+CoreDataClass.swift */; };
+		91D12F1D278D977A008E278F /* SavedGame+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D12F19278D977A008E278F /* SavedGame+CoreDataProperties.swift */; };
+		91D12F1E278D977A008E278F /* LeaderboardStatistic+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D12F1A278D977A008E278F /* LeaderboardStatistic+CoreDataClass.swift */; };
+		91D12F1F278D977A008E278F /* LeaderboardStatistic+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D12F1B278D977A008E278F /* LeaderboardStatistic+CoreDataProperties.swift */; };
+		91D12F23278D98A8008E278F /* GameDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D12F22278D98A8008E278F /* GameDataRepository.swift */; };
 		91F10F462760E33D009468C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F10F452760E33D009468C4 /* AppDelegate.swift */; };
 		91F10F482760E33D009468C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F10F472760E33D009468C4 /* SceneDelegate.swift */; };
-		91F10F4A2760E33D009468C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F10F492760E33D009468C4 /* ViewController.swift */; };
+		91F10F4A2760E33D009468C4 /* MainGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F10F492760E33D009468C4 /* MainGameController.swift */; };
 		91F10F4D2760E33D009468C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91F10F4B2760E33D009468C4 /* Main.storyboard */; };
 		91F10F502760E33D009468C4 /* _5_puzzle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 91F10F4E2760E33D009468C4 /* _5_puzzle.xcdatamodeld */; };
 		91F10F522760E33E009468C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91F10F512760E33E009468C4 /* Assets.xcassets */; };
@@ -19,10 +27,18 @@
 
 /* Begin PBXFileReference section */
 		91336A462784BC1800863663 /* GameBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBrain.swift; sourceTree = "<group>"; };
+		91D12F12278D79D8008E278F /* LoadGameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadGameController.swift; sourceTree = "<group>"; };
+		91D12F14278D79F1008E278F /* LeaderBoardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardController.swift; sourceTree = "<group>"; };
+		91D12F16278D87A4008E278F /* GameBrainDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBrainDTO.swift; sourceTree = "<group>"; };
+		91D12F18278D977A008E278F /* SavedGame+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedGame+CoreDataClass.swift"; sourceTree = "<group>"; };
+		91D12F19278D977A008E278F /* SavedGame+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedGame+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		91D12F1A278D977A008E278F /* LeaderboardStatistic+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LeaderboardStatistic+CoreDataClass.swift"; sourceTree = "<group>"; };
+		91D12F1B278D977A008E278F /* LeaderboardStatistic+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LeaderboardStatistic+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		91D12F22278D98A8008E278F /* GameDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDataRepository.swift; sourceTree = "<group>"; };
 		91F10F422760E33D009468C4 /* 15-puzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "15-puzzle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F10F452760E33D009468C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91F10F472760E33D009468C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		91F10F492760E33D009468C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		91F10F492760E33D009468C4 /* MainGameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGameController.swift; sourceTree = "<group>"; };
 		91F10F4C2760E33D009468C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		91F10F4F2760E33D009468C4 /* _5_puzzle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = _5_puzzle.xcdatamodel; sourceTree = "<group>"; };
 		91F10F512760E33E009468C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,6 +57,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		91D12F20278D978B008E278F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				91D12F18278D977A008E278F /* SavedGame+CoreDataClass.swift */,
+				91D12F19278D977A008E278F /* SavedGame+CoreDataProperties.swift */,
+				91D12F1A278D977A008E278F /* LeaderboardStatistic+CoreDataClass.swift */,
+				91D12F1B278D977A008E278F /* LeaderboardStatistic+CoreDataProperties.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		91D12F21278D9885008E278F /* DAL */ = {
+			isa = PBXGroup;
+			children = (
+				91D12F22278D98A8008E278F /* GameDataRepository.swift */,
+			);
+			path = DAL;
+			sourceTree = "<group>";
+		};
 		91F10F392760E33D009468C4 = {
 			isa = PBXGroup;
 			children = (
@@ -60,10 +95,15 @@
 		91F10F442760E33D009468C4 /* 15-puzzle */ = {
 			isa = PBXGroup;
 			children = (
+				91D12F21278D9885008E278F /* DAL */,
+				91D12F20278D978B008E278F /* Domain */,
 				91F10F452760E33D009468C4 /* AppDelegate.swift */,
 				91F10F472760E33D009468C4 /* SceneDelegate.swift */,
 				91336A462784BC1800863663 /* GameBrain.swift */,
-				91F10F492760E33D009468C4 /* ViewController.swift */,
+				91D12F16278D87A4008E278F /* GameBrainDTO.swift */,
+				91F10F492760E33D009468C4 /* MainGameController.swift */,
+				91D12F12278D79D8008E278F /* LoadGameController.swift */,
+				91D12F14278D79F1008E278F /* LeaderBoardController.swift */,
 				91F10F4B2760E33D009468C4 /* Main.storyboard */,
 				91F10F512760E33E009468C4 /* Assets.xcassets */,
 				91F10F532760E33E009468C4 /* LaunchScreen.storyboard */,
@@ -143,11 +183,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91F10F4A2760E33D009468C4 /* ViewController.swift in Sources */,
+				91F10F4A2760E33D009468C4 /* MainGameController.swift in Sources */,
+				91D12F1C278D977A008E278F /* SavedGame+CoreDataClass.swift in Sources */,
 				91336A472784BC1800863663 /* GameBrain.swift in Sources */,
+				91D12F1D278D977A008E278F /* SavedGame+CoreDataProperties.swift in Sources */,
+				91D12F17278D87A4008E278F /* GameBrainDTO.swift in Sources */,
 				91F10F462760E33D009468C4 /* AppDelegate.swift in Sources */,
 				91F10F482760E33D009468C4 /* SceneDelegate.swift in Sources */,
 				91F10F502760E33D009468C4 /* _5_puzzle.xcdatamodeld in Sources */,
+				91D12F1F278D977A008E278F /* LeaderboardStatistic+CoreDataProperties.swift in Sources */,
+				91D12F13278D79D8008E278F /* LoadGameController.swift in Sources */,
+				91D12F23278D98A8008E278F /* GameDataRepository.swift in Sources */,
+				91D12F15278D79F1008E278F /* LeaderBoardController.swift in Sources */,
+				91D12F1E278D977A008E278F /* LeaderboardStatistic+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

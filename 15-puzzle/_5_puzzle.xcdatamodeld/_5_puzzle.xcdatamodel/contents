@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20G165" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="LeaderboardStatistic" representedClassName="LeaderboardStatistic" syncable="YES">
+        <attribute name="moveMade" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="playerName" optional="YES" attributeType="String" minValueString="1" maxValueString="128"/>
+        <attribute name="timeSpent" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="SavedGame" representedClassName="SavedGame" syncable="YES">
+        <attribute name="gameJson" optional="YES" attributeType="String"/>
+        <attribute name="saveDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="saveName" optional="YES" attributeType="String" minValueString="1" maxValueString="128"/>
+    </entity>
+    <elements>
+        <element name="SavedGame" positionX="-63" positionY="-18" width="128" height="74"/>
+        <element name="LeaderboardStatistic" positionX="-54" positionY="18" width="128" height="74"/>
+    </elements>
 </model>

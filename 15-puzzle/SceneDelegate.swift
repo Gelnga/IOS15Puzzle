@@ -17,6 +17,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        if let rvc = window?.rootViewController as? UINavigationController {
+            if let mgvc = rvc.viewControllers.first as? MainGameController {
+                mgvc.container = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer
+            }
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -24,6 +29,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This occurs shortly after the scene enters the background, or when its session is discarded.
         // Release any resources associated with this scene that can be re-created the next time the scene connects.
         // The scene may re-connect later, as its session was not necessarily discarded (see `application:didDiscardSceneSessions` instead).
+        
+        if let rvc = window?.rootViewController as? UINavigationController {
+            if let mgvc = rvc.viewControllers.first as? MainGameController {
+                let defaults = UserDefaults.standard
+                let data = mgvc.brain.getGameBrainJSON()
+                defaults.setValue(data, forKey: "AutoSave")
+            }
+        }
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
